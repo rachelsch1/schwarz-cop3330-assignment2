@@ -1,25 +1,12 @@
 package assignment2.ex25.base;
 
-/* Functions help you abstract away complex operations, but they also help you build reusable components.
-
-Create a program that determines the complexity of a given password based on these rules:
-
-A very weak password contains only numbers and is fewer than eight characters.
-A weak password contains only letters and is fewer than eight characters.
-A strong password contains letters and at least one number and is at least eight characters.
-A very strong password contains letters, numbers, and special characters and is at least eight characters.
-Example Output
-The password '12345' is a very weak password.
-The password 'abcdef' is a weak password.
-The password 'abc123xyz' is a strong password.
-The password '1337h@xor!' is a very strong password.
-Constraints
-Create a passwordValidator function that takes in the password as its argument and returns a value you can evaluate to determine the password strength. Do not have the function return a string—you may need to support multiple languages in the future.
-Use a single output statement.
+/*
+UCF COP3330 Summer 2021 Assignment 2 Solution
+Copyright 2021 Rachel Schwarz
  */
 
 import java.util.Scanner;
-import java.util.Arrays;
+import java.lang.Character;
 
 public class ex25 {
     public static void main(String[] args) {
@@ -27,20 +14,64 @@ public class ex25 {
 
         System.out.print("Input your password: ");
         String inputPass = input.nextLine();
+        String strengthStr = " ";
 
         int strength = passwordValidator(inputPass);
 
 
+        if(strength == 1) {
+            strengthStr = "very weak";
+        } else if(strength == 2) {
+            strengthStr = "weak";
+        } else if(strength == 3) {
+            strengthStr = "strong";
+        } else if(strength == 4) {
+            strengthStr = "very strong";
+        }
+
+        System.out.println("The password '" + inputPass + "' is a " + strengthStr + " password.");
     }
 
     public static int passwordValidator(String inputPass) {
-        int strength = 0;
+        int strength;
+        int x, count1 = 0, count2 = 0, count3 = 0;
         char[] passArr = inputPass.toCharArray();
+
         if(inputPass.length() < 8) {
-
-
+            for(x = 0; x < inputPass.length(); x++) {
+                if(Character.isLetter(passArr[x])) {
+                    count1++;
+                } else if(Character.isDigit(passArr[x])) {
+                    count1 += 2;
+                }
+            }
+            if(count1 == inputPass.length()) {
+                strength = 2;
+            } else if(count1 == (2 * inputPass.length())) {
+                strength = 1;
+            } else {
+                strength = 2;
+            }
         } else {
+            for(x = 0; x < inputPass.length(); x++) {
+                if(Character.isLetter(passArr[x])) {
+                    count1++;
+                } else if(Character.isDigit(passArr[x])) {
+                    count2++;
+                } else if((Character.compare(passArr[x], '?') == 0) || (Character.compare(passArr[x], '!') == 0) || (Character.compare(passArr[x], '@') == 0) || (Character.compare(passArr[x], '@') == 0) || (Character.compare(passArr[x], '#') == 0) || (Character.compare(passArr[x], '$') == 0) || (Character.compare(passArr[x], '%') == 0) || (Character.compare(passArr[x], '&') == 0) || (Character.compare(passArr[x], '*') == 0)) {
+                    count3++;
+                }
+            }
 
+            if((count1 > 0) && (count2 > 0) && (count3 == 0)) {
+                strength = 3;
+            } else if((count1 > 0) && (count2 > 0) && (count3 > 0)) {
+                strength = 4;
+            } else {
+                strength = 2;
+            }
         }
+
+        return strength;
     }
 }
