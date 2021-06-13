@@ -6,7 +6,6 @@ Copyright 2021 Rachel Schwarz
  */
 
 import java.util.Scanner;
-import java.lang.Math;
 
 public class ex26 {
     public static void main(String[] args) {
