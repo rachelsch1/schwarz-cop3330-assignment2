@@ -10,37 +10,37 @@ public class ex39 {
         List<Map<String, String>> list = new ArrayList<>();
 
         Map<String, people> map = new HashMap<>();
-        people john = new people;
+        people john = new people();
         john.firstName = "John";
         john.lastName = "Johnson";
         john.position = "Manager";
         john.date = "2016-12-31";
 
-        people tou = new people;
+        people tou = new people();
         tou.firstName = "Tou";
         tou.lastName = "Xiong";
         tou.position = "Software Engineer";
         tou.date = "2016-10-05";
 
-        people michaela = new people;
+        people michaela = new people();
         michaela.firstName = "Michaela";
         michaela.lastName = "Michaelson";
         michaela.position = "District Manager";
         michaela.date = "2015-12-19";
 
-        people jake = new people;
+        people jake = new people();
         jake.firstName = "Jake";
         jake.lastName = "Jacobson";
         jake.position = "Programmer";
         jake.date = "";
 
-        people jacquelyn = new people;
+        people jacquelyn = new people();
         jacquelyn.firstName = "Jacquelyn";
         jacquelyn.lastName = "Jackson";
         jacquelyn.position = "DBA";
         jacquelyn.date = "";
 
-        people sally = new people;
+        people sally = new people();
         sally.firstName = "Sally";
         sally.lastName = "Webber";
         sally.position = "Web Developer";

@@ -5,6 +5,8 @@ UCF COP3330 Summer 2021 Assignment 2 Solution
 Copyright 2021 Rachel Schwarz
  */
 
+// calc years to double investment
+
 import java.util.Scanner;
 
 public class ex29 {

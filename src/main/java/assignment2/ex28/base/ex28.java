@@ -5,6 +5,8 @@ UCF COP3330 Summer 2021 Assignment 2 Solution
 Copyright 2021 Rachel Schwarz
  */
 
+// get total of inputted numbers
+
 import java.util.Scanner;
 
 /* flowchart:

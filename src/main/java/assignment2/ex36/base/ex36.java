@@ -5,11 +5,14 @@ UCF COP3330 Summer 2021 Assignment 2 Solution
 Copyright 2021 Rachel Schwarz
  */
 
+// get statistics of a list of numbers
+
 import java.text.DecimalFormat;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class ex36 {
+
     static DecimalFormat df = new DecimalFormat("0.00");
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

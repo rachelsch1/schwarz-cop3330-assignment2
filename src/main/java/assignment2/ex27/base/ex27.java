@@ -5,6 +5,8 @@ UCF COP3330 Summer 2021 Assignment 2 Solution
 Copyright 2021 Rachel Schwarz
  */
 
+// print error messages for incorrectly formatted input
+
 import java.util.Scanner;
 import java.lang.Character;
 

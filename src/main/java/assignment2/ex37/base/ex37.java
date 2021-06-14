@@ -1,6 +1,12 @@
 package assignment2.ex37.base;
 
 
+/*
+UCF COP3330 Summer 2021 Assignment 2 Solution
+Copyright 2021 Rachel Schwarz
+ */
+
+// generate random password
 
 import java.util.ArrayList;
 import java.util.Scanner;

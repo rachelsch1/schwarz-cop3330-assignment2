@@ -5,6 +5,8 @@ UCF COP3330 Summer 2021 Assignment 2 Solution
 Copyright 2021 Rachel Schwarz
  */
 
+// number guessing game
+
 import java.util.Scanner;
 
 public class ex32 {

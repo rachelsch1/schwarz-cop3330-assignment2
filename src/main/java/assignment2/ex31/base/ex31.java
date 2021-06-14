@@ -4,19 +4,8 @@ package assignment2.ex31.base;
 UCF COP3330 Summer 2021 Assignment 2 Solution
 Copyright 2021 Rachel Schwarz
  */
- /* while(!isValid) {
-            System.out.print("What is your weight? ");
-            if (input.hasNextDouble()) {
-                weight = input.nextDouble();
-                isValid = true;
-            }
-            else {
-                System.out.println("Invalid input. Try again.");
-            }
-            input.nextLine();
-        }
 
-  */
+// heart rate calculator
 
 import java.util.Scanner;
 
